@@ -33,7 +33,7 @@ jobs:
           echo test, and deploy your project.
       
       - name: Bump version and push tag
-        uses: hennejg/github-tag-action@v4.1.jh1
+        uses: hennejg/github-tag-action@master
         id: bump
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
