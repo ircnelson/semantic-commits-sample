@@ -43,7 +43,7 @@ jobs:
           echo ${{ steps.bump.outputs.new_tag }}
           echo ${{ steps.bump.outputs.new_version }}
           echo ${{ steps.bump.outputs.previous_tag }}
-          echo ${{ steps.bump.outputs.changelog }}
+          echo "${{ steps.bump.outputs.changelog }}"
 
       - name: Git tag push
         run: git push --tags
