@@ -45,5 +45,7 @@ jobs:
           echo ${{ steps.bump.outputs.previous_tag }}
           echo "${{ steps.bump.outputs.changelog }}"
 
-      - name: Git tag push
-        run: git push --tags
+      - name: Tag
+        run: |
+          git tag ${{ steps.bump.outputs.new_tag }}
+          git push origin ${{ steps.bump.outputs.new_tag }}
